@@ -13,5 +13,10 @@ namespace BethanysPieShop.Controllers
             _pieRepository = pieRepository;
             _categoryRepository = categoryRepository;
         }
+
+        public IActionResult List()
+        {
+            return View(_pieRepository.AllPies);
+        }
     }
 }
